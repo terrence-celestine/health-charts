@@ -6,7 +6,7 @@ import {
   Moon, 
   UploadCloud, 
   Trash2, 
-  Calendar, 
+  HeartIcon,
   RefreshCw, 
   TrendingUp 
 } from 'lucide-react';
@@ -152,7 +152,6 @@ export const Dashboard: React.FC = () => {
   // 5. Computed Metric Values
   // ==========================================
   const avgSteps = stepsData?.summary.avgSteps || 0;
-  const totalCalories = stepsData?.summary.totalCalories || 0;
   const avgSleepDuration = sleepData?.summary.avgDurationHours || 0;
   const avgSleepEfficiency = sleepData?.summary.avgEfficiency || 0;
   const avgHeartRate = hrData?.summary.avg || 0;
@@ -165,10 +164,10 @@ export const Dashboard: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="bg-violet-600 text-white p-2 rounded-lg">
-              <Activity className="w-6 h-6" />
+              <HeartIcon className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-neutral-900 tracking-tight">Samsung Health Dashboard</h1>
+              <h1 className="text-xl font-bold text-black-900 tracking-tight">Samsung Health Dashboard</h1>
               <p className="text-xs text-neutral-500 font-medium">Secure, private, local-first analytics</p>
             </div>
           </div>
